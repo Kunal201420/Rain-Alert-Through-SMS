@@ -21,7 +21,7 @@ response = requests.get("https://api.weatherapi.com/v1/forecast.json" , params=p
 response.raise_for_status()
 data = response.json()
 will_it_rain = data["forecast"]["forecastday"][0]["hour"][0]["will_it_rain"]
-# chances_of_rain = data["forecast"]["forecastday"][0]["hour"][0]["chance_of_rain"]
+
 
 
 if will_it_rain == 1:
@@ -40,5 +40,6 @@ else:
         to="+918624807815",
         from_="+16073884532",
         body="It's a Sunny day!🌞")
+
 
 
